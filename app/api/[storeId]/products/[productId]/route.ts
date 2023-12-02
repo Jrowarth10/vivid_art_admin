@@ -20,7 +20,7 @@ export async function GET(
         images: true,
         category: true,
         size: true,
-        color: true,
+        // color: true,
       },
     });
 
@@ -84,7 +84,7 @@ export async function PATCH(
       price,
       categoryId,
       images,
-      colorId,
+      // colorId,
       sizeId,
       isFeatured,
       isArchived,
@@ -114,9 +114,9 @@ export async function PATCH(
       return new NextResponse("Category id is required", { status: 400 });
     }
 
-    if (!colorId) {
-      return new NextResponse("Color id is required", { status: 400 });
-    }
+    // if (!colorId) {
+    //   return new NextResponse("Color id is required", { status: 400 });
+    // }
 
     if (!sizeId) {
       return new NextResponse("Size id is required", { status: 400 });
@@ -141,7 +141,7 @@ export async function PATCH(
         name,
         price,
         categoryId,
-        colorId,
+        // colorId,
         sizeId,
         images: {
           deleteMany: {},
